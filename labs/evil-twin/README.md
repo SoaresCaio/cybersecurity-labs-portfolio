@@ -106,17 +106,47 @@ A captura EAPOL confirmou o handshake WPA2-PSK durante a reconexão do cliente. 
 
 ## Evidências
 
-O relatório original contém evidências visuais do laboratório, incluindo:
+As imagens abaixo foram extraídas do relatório final do laboratório e documentam as principais etapas executadas em ambiente controlado.
 
-- Ativação do modo monitor no Kali
-- AP simulado habilitado com Hostapd Mana
-- Cliente associado ao SSID `C-Cyber`
-- Captura DHCP no Wireshark
-- Captura de tráfego HTTP
-- Filtro por IP do cliente
-- Identificação da rede WPA2/CCMP/PSK
-- Captura de mensagens EAPOL
-- Validação da chave com Aircrack-ng
+### Figura 1 - Modo monitor no Kali
+
+![Ativação do modo monitor no Kali](evidencias/figura-01-modo-monitor.png)
+
+### Figura 2 - AP simulado com Hostapd Mana
+
+![Hostapd Mana habilitando o ponto de acesso C-Cyber](evidencias/figura-02-hostapd-mana-ap.png)
+
+### Figura 3 - Cliente associado ao AP simulado
+
+![Cliente associado ao ponto de acesso simulado](evidencias/figura-03-cliente-associado.png)
+
+### Figura 4 - Captura DHCP no Wireshark
+
+![Troca DHCP capturada no Wireshark](evidencias/figura-04-dhcp-wireshark.png)
+
+### Figura 5 - Tráfego HTTP no Wireshark
+
+![Requisições HTTP capturadas no Wireshark](evidencias/figura-05-http-wireshark.png)
+
+### Figura 6 - Filtro por IP do cliente
+
+![Filtro por IP do cliente com tráfego ICMP, HTTP e QUIC](evidencias/figura-06-filtro-cliente.png)
+
+### Figura 7 - Identificação da rede WPA2
+
+![Airodump-ng identificando a rede C-Cyber em WPA2](evidencias/figura-07-airodump-wpa2.png)
+
+### Figura 8 - Desautenticação controlada
+
+![Aireplay-ng em desautenticação controlada do cliente de teste](evidencias/figura-08-deauth-controlado.png)
+
+### Figura 9 - Handshake WPA2 no Wireshark
+
+![Filtro EAPOL exibindo mensagens do handshake WPA2](evidencias/figura-09-handshake-eapol.png)
+
+### Figura 10 - Validação com Aircrack-ng
+
+![Aircrack-ng validando a chave da rede de laboratório](evidencias/figura-10-aircrack-validacao.png)
 
 ## Nota Ética
 
