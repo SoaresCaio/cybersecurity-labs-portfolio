@@ -21,6 +21,7 @@ Meu nome é Caio Adriano e este portfólio foi criado para registrar minha evolu
 | --- | --- | --- |
 | [Evil Twin e Captura WPA2](labs/evil-twin/) | Auditoria Wi-Fi, AP simulado, DHCP, captura de tráfego e handshake WPA2-PSK | Documentado |
 | [Resposta a Incidentes com pfSense, Snort e QRadar](labs/resposta-a-incidentes/) | Segmentação de rede, IDS/IPS, SIEM, rsyslog, QRadar e validação de alertas | Documentado |
+| [Forense Digital - Caso TechSecure](labs/forense-digital/) | Preservação de evidências, análise de logs, artefatos USB, tráfego de rede e recuperação de arquivos | Documentado |
 
 ## Competências Demonstradas
 
