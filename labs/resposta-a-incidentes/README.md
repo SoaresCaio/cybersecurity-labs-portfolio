@@ -36,79 +36,79 @@ As capturas abaixo são exibidas individualmente, preservando a proporção e a 
 
 ### 2. Adaptador WAN do pfSense
 
-[![Adaptador WAN do pfSense](evidencias/figura-02-pfsense-adapter-wan.jpg)](evidencias/figura-02-pfsense-adapter-wan.jpg)
+[![Adaptador WAN do pfSense](evidencias/figura-02-pfsense-adapter-wan.png)](evidencias/figura-02-pfsense-adapter-wan.png)
 
 ### 3. Adaptador LAN do pfSense
 
-[![Adaptador LAN do pfSense](evidencias/figura-03-pfsense-adapter-lan.jpg)](evidencias/figura-03-pfsense-adapter-lan.jpg)
+[![Adaptador LAN do pfSense](evidencias/figura-03-pfsense-adapter-lan.png)](evidencias/figura-03-pfsense-adapter-lan.png)
 
 ### 4. Estado das interfaces do pfSense
 
-[![Estado das interfaces do pfSense](evidencias/figura-04-pfsense-interface-status.jpg)](evidencias/figura-04-pfsense-interface-status.jpg)
+[![Estado das interfaces do pfSense](evidencias/figura-04-pfsense-interface-status.png)](evidencias/figura-04-pfsense-interface-status.png)
 
 ### 5. Configuração do Windows Server
 
-[![Configuração de rede do Windows Server](evidencias/figura-05-windows-server-ip.jpg)](evidencias/figura-05-windows-server-ip.jpg)
+[![Configuração de rede do Windows Server](evidencias/figura-05-windows-server-ip.png)](evidencias/figura-05-windows-server-ip.png)
 
 ### 6. Informações do Ubuntu
 
-[![Informações da máquina Ubuntu](evidencias/figura-06-ubuntu-machine-info.jpg)](evidencias/figura-06-ubuntu-machine-info.jpg)
+[![Informações da máquina Ubuntu](evidencias/figura-06-ubuntu-machine-info.png)](evidencias/figura-06-ubuntu-machine-info.png)
 
 ### 7. Informações do Kali Linux
 
-[![Informações da máquina Kali Linux](evidencias/figura-07-kali-machine-info.jpg)](evidencias/figura-07-kali-machine-info.jpg)
+[![Informações da máquina Kali Linux](evidencias/figura-07-kali-machine-info.png)](evidencias/figura-07-kali-machine-info.png)
 
 ### 8. Teste de conectividade com o pfSense
 
-[![Teste de conectividade do Kali com o pfSense](evidencias/figura-08-kali-ping-pfsense.jpg)](evidencias/figura-08-kali-ping-pfsense.jpg)
+[![Teste de conectividade do Kali com o pfSense](evidencias/figura-08-kali-ping-pfsense.png)](evidencias/figura-08-kali-ping-pfsense.png)
 
 ### 9. Terminal do QRadar
 
-[![Terminal do QRadar Community Edition](evidencias/figura-09-qradar-terminal.jpg)](evidencias/figura-09-qradar-terminal.jpg)
+[![Terminal do QRadar Community Edition](evidencias/figura-09-qradar-terminal.png)](evidencias/figura-09-qradar-terminal.png)
 
 ### 10. Dashboard do QRadar
 
-[![Dashboard do QRadar](evidencias/figura-10-qradar-dashboard.jpg)](evidencias/figura-10-qradar-dashboard.jpg)
+[![Dashboard do QRadar](evidencias/figura-10-qradar-dashboard.png)](evidencias/figura-10-qradar-dashboard.png)
 
 ### 11. Configuração do rsyslog
 
-[![Arquivo de configuração do rsyslog](evidencias/figura-11-ubuntu-rsyslog-conf.jpg)](evidencias/figura-11-ubuntu-rsyslog-conf.jpg)
+[![Arquivo de configuração do rsyslog](evidencias/figura-11-ubuntu-rsyslog-conf.png)](evidencias/figura-11-ubuntu-rsyslog-conf.png)
 
 ### 12. Serviço rsyslog em execução
 
-[![Status do serviço rsyslog](evidencias/figura-12-ubuntu-rsyslog-running.jpg)](evidencias/figura-12-ubuntu-rsyslog-running.jpg)
+[![Status do serviço rsyslog](evidencias/figura-12-ubuntu-rsyslog-running.png)](evidencias/figura-12-ubuntu-rsyslog-running.png)
 
 ### 13. Log Activity no QRadar
 
-[![Log Activity no QRadar](evidencias/figura-13-qradar-log-activity.jpg)](evidencias/figura-13-qradar-log-activity.jpg)
+[![Log Activity no QRadar](evidencias/figura-13-qradar-log-activity.png)](evidencias/figura-13-qradar-log-activity.png)
 
 ### 14. Detalhes de evento no QRadar
 
-[![Detalhes de evento no QRadar](evidencias/figura-14-qradar-log-detail.jpg)](evidencias/figura-14-qradar-log-detail.jpg)
+[![Detalhes de evento no QRadar](evidencias/figura-14-qradar-log-detail.png)](evidencias/figura-14-qradar-log-detail.png)
 
 ### 15. Network Activity no QRadar
 
-[![Network Activity no QRadar](evidencias/figura-15-qradar-network-activity.jpg)](evidencias/figura-15-qradar-network-activity.jpg)
+[![Network Activity no QRadar](evidencias/figura-15-qradar-network-activity.png)](evidencias/figura-15-qradar-network-activity.png)
 
 ### 16. Snort habilitado na interface LAN
 
-[![Snort habilitado na interface LAN](evidencias/figura-16-snort-lan-interface.jpg)](evidencias/figura-16-snort-lan-interface.jpg)
+[![Snort habilitado na interface LAN](evidencias/figura-16-snort-lan-interface.png)](evidencias/figura-16-snort-lan-interface.png)
 
 ### 17. Regras customizadas do Snort
 
-[![Regras customizadas do Snort](evidencias/figura-17-snort-lan-rules.jpg)](evidencias/figura-17-snort-lan-rules.jpg)
+[![Regras customizadas do Snort](evidencias/figura-17-snort-lan-rules.png)](evidencias/figura-17-snort-lan-rules.png)
 
 ### 18. Alerta ICMP no Snort
 
-[![Alerta ICMP no Snort](evidencias/figura-18-snort-ping-alert.jpg)](evidencias/figura-18-snort-ping-alert.jpg)
+[![Alerta ICMP no Snort](evidencias/figura-18-snort-ping-alert.png)](evidencias/figura-18-snort-ping-alert.png)
 
 ### 19. Alerta HTTP no Snort
 
-[![Alerta HTTP no Snort](evidencias/figura-19-snort-http-alert.jpg)](evidencias/figura-19-snort-http-alert.jpg)
+[![Alerta HTTP no Snort](evidencias/figura-19-snort-http-alert.png)](evidencias/figura-19-snort-http-alert.png)
 
 ### 20. Alerta DNS no Snort
 
-[![Alerta DNS no Snort](evidencias/figura-20-snort-dns-alert.jpg)](evidencias/figura-20-snort-dns-alert.jpg)
+[![Alerta DNS no Snort](evidencias/figura-20-snort-dns-alert.png)](evidencias/figura-20-snort-dns-alert.png)
 
 ## Resultados
 
