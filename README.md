@@ -1,6 +1,6 @@
 # Portfólio de Laboratórios em Cibersegurança
 
-Este repositório reúne estudos de caso e laboratórios práticos desenvolvidos durante minha pós-graduação, com foco em segurança ofensiva, análise de redes, auditoria Wi-Fi e documentação técnica.
+Este repositório reúne os estudos de caso e laboratórios práticos desenvolvidos ao longo da minha pós-graduação em cibersegurança. O portfólio abrange diferentes áreas da formação, incluindo segurança ofensiva e defensiva, redes, auditoria, monitoramento, detecção, resposta a incidentes e documentação técnica.
 
 Todos os exercícios documentados aqui foram executados em ambientes controlados, com equipamentos próprios ou explicitamente autorizados. O objetivo é demonstrar raciocínio técnico, metodologia, análise de evidências e recomendações de mitigação.
 
