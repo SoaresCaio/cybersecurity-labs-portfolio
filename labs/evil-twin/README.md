@@ -104,49 +104,109 @@ A captura EAPOL confirmou o handshake WPA2-PSK durante a reconexão do cliente. 
 - Treinar usuários para evitar redes suspeitas e certificados desconhecidos
 - Monitorar SSIDs duplicados, APs não autorizados e eventos de desautenticação
 
-## Evidências
+## Evidências analisadas
 
-As imagens abaixo foram extraídas do relatório final do laboratório e documentam as principais etapas executadas em ambiente controlado.
+As capturas abaixo registram a execução do laboratório. Cada item informa o que foi realizado e o que a evidência permite concluir. Clique em uma imagem para visualizá-la em tamanho completo.
 
-### Figura 1 - Modo monitor no Kali
+### 1. Ativação do modo monitor
 
-![Ativação do modo monitor no Kali](evidencias/figura-01-modo-monitor.png)
+**Procedimento:** a interface sem fio foi preparada com a suíte Aircrack-ng para operar em modo monitor.
 
-### Figura 2 - AP simulado com Hostapd Mana
+**Resultado:** a captura mostra a interface wlan0mon ativa e o adaptador baseado no chipset Qualcomm Atheros AR9271 reconhecido pelo Kali Linux.
 
-![Hostapd Mana habilitando o ponto de acesso C-Cyber](evidencias/figura-02-hostapd-mana-ap.png)
+**Interpretação:** a evidência confirma que o adaptador estava apto a observar quadros 802.11 no ambiente de teste.
 
-### Figura 3 - Cliente associado ao AP simulado
+[![Ativação do modo monitor no Kali](evidencias/figura-01-modo-monitor.png)](evidencias/figura-01-modo-monitor.png)
 
-![Cliente associado ao ponto de acesso simulado](evidencias/figura-03-cliente-associado.png)
+### 2. Inicialização do AP simulado
 
-### Figura 4 - Captura DHCP no Wireshark
+**Procedimento:** o Hostapd Mana foi iniciado com a configuração preparada para anunciar o SSID C-Cyber.
 
-![Troca DHCP capturada no Wireshark](evidencias/figura-04-dhcp-wireshark.png)
+**Resultado:** o terminal registra a habilitação do ponto de acesso e o início do serviço.
 
-### Figura 5 - Tráfego HTTP no Wireshark
+**Interpretação:** a captura comprova que o AP controlado estava ativo; ela não representa uma rede de terceiros.
 
-![Requisições HTTP capturadas no Wireshark](evidencias/figura-05-http-wireshark.png)
+[![Hostapd Mana habilitando o ponto de acesso C-Cyber](evidencias/figura-02-hostapd-mana-ap.png)](evidencias/figura-02-hostapd-mana-ap.png)
 
-### Figura 6 - Filtro por IP do cliente
+### 3. Associação do cliente de teste
 
-![Filtro por IP do cliente com tráfego ICMP, HTTP e QUIC](evidencias/figura-06-filtro-cliente.png)
+**Procedimento:** um smartphone próprio foi conectado ao SSID criado no laboratório.
 
-### Figura 7 - Identificação da rede WPA2
+**Resultado:** os registros do Hostapd Mana mostram a associação da estação ao AP.
 
-![Airodump-ng identificando a rede C-Cyber em WPA2](evidencias/figura-07-airodump-wpa2.png)
+**Interpretação:** a evidência confirma que o cliente reconheceu e se associou ao ponto de acesso simulado.
 
-### Figura 8 - Desautenticação controlada
+[![Cliente associado ao ponto de acesso simulado](evidencias/figura-03-cliente-associado.png)](evidencias/figura-03-cliente-associado.png)
 
-![Aireplay-ng em desautenticação controlada do cliente de teste](evidencias/figura-08-deauth-controlado.png)
+### 4. Concessão de endereço por DHCP
 
-### Figura 9 - Handshake WPA2 no Wireshark
+**Procedimento:** o dnsmasq foi configurado para fornecer parâmetros de rede ao cliente, enquanto o tráfego era capturado no Wireshark.
 
-![Filtro EAPOL exibindo mensagens do handshake WPA2](evidencias/figura-09-handshake-eapol.png)
+**Resultado:** aparecem as mensagens DHCP Discover, Offer, Request e ACK.
 
-### Figura 10 - Validação com Aircrack-ng
+**Interpretação:** a sequência DORA completa confirma que o cliente recebeu configuração IP e estava integrado à rede do laboratório.
 
-![Aircrack-ng validando a chave da rede de laboratório](evidencias/figura-10-aircrack-validacao.png)
+[![Troca DHCP capturada no Wireshark](evidencias/figura-04-dhcp-wireshark.png)](evidencias/figura-04-dhcp-wireshark.png)
+
+### 5. Observação de tráfego HTTP
+
+**Procedimento:** foram geradas requisições de navegação no cliente e aplicado um filtro HTTP no Wireshark.
+
+**Resultado:** a captura apresenta requisições em texto claro originadas pelo dispositivo de teste.
+
+**Interpretação:** o exemplo demonstra a exposição de metadados e conteúdo quando HTTP é utilizado. Sessões HTTPS permanecem protegidas por TLS.
+
+[![Requisições HTTP capturadas no Wireshark](evidencias/figura-05-http-wireshark.png)](evidencias/figura-05-http-wireshark.png)
+
+### 6. Correlação pelo IP do cliente
+
+**Procedimento:** o tráfego foi filtrado pelo endereço 10.0.0.31 atribuído ao smartphone.
+
+**Resultado:** o Wireshark reúne comunicações ICMP, HTTP e QUIC relacionadas ao mesmo cliente.
+
+**Interpretação:** o filtro permite correlacionar protocolos e conexões ao host testado, sem revelar o conteúdo protegido por QUIC ou TLS.
+
+[![Filtro por IP do cliente com tráfego ICMP, HTTP e QUIC](evidencias/figura-06-filtro-cliente.png)](evidencias/figura-06-filtro-cliente.png)
+
+### 7. Identificação da rede WPA2-PSK
+
+**Procedimento:** o Airodump-ng foi utilizado para localizar a rede de laboratório e registrar canal, BSSID, criptografia e estações associadas.
+
+**Resultado:** a rede C-Cyber aparece como WPA2, CCMP e PSK no canal 6.
+
+**Interpretação:** a evidência delimita corretamente o teste como WPA2-Personal/PSK, e não WPA2 Enterprise.
+
+[![Airodump-ng identificando a rede C-Cyber em WPA2](evidencias/figura-07-airodump-wpa2.png)](evidencias/figura-07-airodump-wpa2.png)
+
+### 8. Reconexão controlada do cliente
+
+**Procedimento:** no ambiente próprio, uma desautenticação controlada foi executada para provocar a reconexão do cliente e observar a nova autenticação.
+
+**Resultado:** o Aireplay-ng registra o envio dos quadros durante o teste.
+
+**Interpretação:** a etapa foi usada apenas para gerar de forma reproduzível o handshake da rede autorizada. Em redes reais, esse comportamento pode causar indisponibilidade e exige autorização explícita.
+
+[![Aireplay-ng em desautenticação controlada do cliente de teste](evidencias/figura-08-deauth-controlado.png)](evidencias/figura-08-deauth-controlado.png)
+
+### 9. Captura do handshake WPA2
+
+**Procedimento:** a captura foi filtrada por EAPOL após a reconexão do cliente.
+
+**Resultado:** o Wireshark mostra mensagens pertencentes ao processo de handshake WPA/WPA2.
+
+**Interpretação:** a presença dos quadros EAPOL confirma que material de autenticação suficiente foi observado para realizar uma validação offline da chave de laboratório.
+
+[![Filtro EAPOL exibindo mensagens do handshake WPA2](evidencias/figura-09-handshake-eapol.png)](evidencias/figura-09-handshake-eapol.png)
+
+### 10. Validação da chave de laboratório
+
+**Procedimento:** o arquivo de captura foi analisado pelo Aircrack-ng com uma wordlist preparada para o experimento.
+
+**Resultado:** a ferramenta confirmou a chave configurada porque ela estava presente na lista utilizada.
+
+**Interpretação:** o resultado demonstra o risco de senhas previsíveis. Ele não significa que toda chave WPA2 possa ser recuperada; a viabilidade depende principalmente da qualidade da senha e do conjunto de candidatos.
+
+[![Aircrack-ng validando a chave da rede de laboratório](evidencias/figura-10-aircrack-validacao.png)](evidencias/figura-10-aircrack-validacao.png)
 
 ## Nota Ética
 
