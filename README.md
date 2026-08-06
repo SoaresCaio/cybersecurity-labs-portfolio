@@ -20,6 +20,7 @@ Meu nome é Caio Adriano e este portfólio foi criado para registrar minha evolu
 | Lab | Tema | Status |
 | --- | --- | --- |
 | [Evil Twin e Captura WPA2](labs/evil-twin/) | Auditoria Wi-Fi, AP simulado, DHCP, captura de tráfego e handshake WPA2-PSK | Documentado |
+| [Resposta a Incidentes com pfSense, Snort e QRadar](labs/resposta-a-incidentes/) | Segmentação de rede, IDS/IPS, SIEM, rsyslog, QRadar e validação de alertas | Documentado |
 
 ## Competências Demonstradas
 
@@ -40,6 +41,10 @@ Meu nome é Caio Adriano e este portfólio foi criado para registrar minha evolu
 - hostapd-mana
 - dnsmasq
 - aircrack-ng suite
+- pfSense CE
+- Snort IDS/IPS
+- IBM QRadar Community Edition
+- rsyslog
 
 ## Aviso Ético
 
